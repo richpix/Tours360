@@ -42,8 +42,8 @@ html, body {
   background-image: url('https://360tours.com.mx/wp-content/uploads/2025/10/flecha.png');
   background-size: contain;
   background-repeat: no-repeat;
-  width: 48px;
-  height: 48px;
+  width: 26px;
+  height: 26px;
   border: none;
 
 }
@@ -51,3 +51,4 @@ html, body {
 .pnlm-about-msg {
   display: none !important;
 }
+
