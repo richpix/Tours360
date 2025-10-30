@@ -1,10 +1,10 @@
 const escenasPortafolio = {
-  
+
   "atrio": {
     "title": "Iglesia",
     "type": "equirectangular",
     "panorama": "https://360tours.com.mx/wp-content/uploads/2025/10/c1atrio.jpg",
-    
+   
     "hotSpots": [
 
         crearHotspot(-60, -10, "atrioizq","ir" ),
@@ -14,7 +14,7 @@ const escenasPortafolio = {
     ]
         },
 
-        
+
   "atrioizq": {
           "title": "Iglesia",
           "type": "equirectangular",
@@ -26,6 +26,7 @@ const escenasPortafolio = {
           "hfov": 90, //zoom--- max 120
           //-------------------------------
           "hotSpots": [
+            //yaw, pitch, destino, texto
             crearHotspot(128, -2, "atrio", ),
             crearHotspot(96, -22, "enmedio", )
           ]
@@ -34,15 +35,16 @@ const escenasPortafolio = {
          
 
         "enmedio": {
+             "hotSpotDebug": true,
           "title": "centro",
           "type": "equirectangular",
           "panorama": "https://360tours.com.mx/wp-content/uploads/2025/10/c1atriomedio.jpg",
           "hotSpots": [
 
-            crearHotspot(-10, 180, "atrio", "Volver a atrio"),
-            crearHotspot(-20, 100, "atrioder", "ir a la derecha"),
-            crearHotspot(-25, -90, "atrioizq", "ir a la izquierda"),
-            crearHotspot(-15, -50, "pasillomed", "Ir al pasillo medio")
+            crearHotspot(165, -15, "atrio", "Volver a atrio"),
+            crearHotspot(94, -18, "atrioder", "ir a la derecha"),
+            crearHotspot(-97, -20, "atrioizq", "ir a la izquierda"),
+            crearHotspot(-54, -18, "pasillomed", "Ir al pasillo medio")
           ]
         },
             
@@ -118,3 +120,4 @@ const escenasPortafolio = {
 
 // 🔹 Inicializar el visor
 crearVisor('tour', escenasPortafolio, 'atrio');
+
