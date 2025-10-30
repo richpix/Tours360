@@ -16,6 +16,7 @@ function crearVisor(idContenedor, configuracionEscenas, primeraEscena) {
 
   return viewer;
 }
+
 //Personalizar hotspots
 function crearHotspot(yaw, pitch, destino, texto = "Ir") {
   return {
@@ -36,6 +37,8 @@ document.getElementById('tour').addEventListener('contextmenu', function (e) {
 
   alert("360 Tours © 2025\nDesarrollado por Ricardo Pool");
 });
+
+
 
 
 
