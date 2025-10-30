@@ -1,8 +1,7 @@
 
-// Variable global del visor
+// 🔹 Variable global para el visor
 let viewer;
 
-// Crear visor
 function crearVisor(idContenedor, configuracionEscenas, primeraEscena) {
   viewer = pannellum.viewer(idContenedor, {
     "default": {
@@ -10,10 +9,11 @@ function crearVisor(idContenedor, configuracionEscenas, primeraEscena) {
       "autoLoad": true,
       "sceneFadeDuration": 1000,
       "compass": false,
-      "author": "360 Tours México"
+      "author": "Ricardo Pool"
     },
     "scenes": configuracionEscenas
   });
+
   return viewer;
 }
 //Personalizar hotspots
@@ -36,6 +36,7 @@ document.getElementById('tour').addEventListener('contextmenu', function (e) {
 
   alert("360 Tours © 2025\nDesarrollado por Ricardo Pool");
 });
+
 
 
 
