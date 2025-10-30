@@ -1,0 +1,48 @@
+
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background-color: #000;
+}
+
+#tour {
+  width: 100%;
+  height: 100vh;
+}
+
+#tour-header {
+  position: absolute;
+  top: 15px;
+  left: 45px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 8px 15px;
+  border-radius: 10px;
+}
+
+#tour-header img {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+#tour-header span {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+/* Ejemplo de hotspot personalizado */
+.hotspot-flecha {
+  background-image: url('https://360tours.com.mx/wp-content/uploads/2025/10/flecha.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+  border: none;
+}
