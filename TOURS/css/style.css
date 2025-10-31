@@ -1,5 +1,4 @@
 
-
 html, body {
   margin: 0;
   height: 100%;
@@ -45,10 +44,25 @@ html, body {
   width: 26px;
   height: 26px;
   border: none;
-
 }
 
+/* Oculta el cuadro de info "about" al dar clic derecho */
 .pnlm-about-msg {
   display: none !important;
 }
+
+
+/* Oculta el cuadro de info de la imagen */
+.pnlm-loading-msg {
+    display: none !important;
+}
+
+.pnlm-loading {
+  display: none !important; /* oculta completamente el loading nativo */
+}
+
+.pnlm-container canvas {
+  background-color: transparent !important; /* evita el fondo negro */
+}
+
 
