@@ -1,5 +1,8 @@
+
 // 🔹 Variable global para el visor
 let viewer;
+let menuMostrado = false;
+
 
 // 🔹 Crear visor Pannellum
 function crearVisor(idContenedor, configuracionEscenas, primeraEscena) {
@@ -7,9 +10,12 @@ function crearVisor(idContenedor, configuracionEscenas, primeraEscena) {
     "default": {
       "firstScene": primeraEscena,
       "autoLoad": true,
+      "showFullscreenCtrl": true,
+        "showZoomCtrl": true,
+        "showControls": true,
       "sceneFadeDuration": 1000,
       "compass": false,
-      "author": "Ricardo Pool"
+      //"author": "Ricardo Pool"
     },
     "scenes": configuracionEscenas
   });
@@ -17,7 +23,9 @@ function crearVisor(idContenedor, configuracionEscenas, primeraEscena) {
   return viewer;
 }
 
-// 🔹 Crear hotspots con transición estilo Street View
+
+
+// 🔹 Crear hotspots 
 function crearHotspot(yaw, pitch, destino, texto = "Ir") {
   return {
     pitch,
@@ -37,4 +45,6 @@ document.getElementById('tour').addEventListener('contextmenu', function (e) {
   e.preventDefault();
   alert("360 Tours © 2025\nDesarrollado por Ricardo Pool");
 });
+
+
 
