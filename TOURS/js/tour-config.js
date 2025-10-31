@@ -1,7 +1,7 @@
-
 // 🔹 Variable global para el visor
 let viewer;
 
+// 🔹 Crear visor Pannellum
 function crearVisor(idContenedor, configuracionEscenas, primeraEscena) {
   viewer = pannellum.viewer(idContenedor, {
     "default": {
@@ -17,7 +17,7 @@ function crearVisor(idContenedor, configuracionEscenas, primeraEscena) {
   return viewer;
 }
 
-//Personalizar hotspots
+// 🔹 Crear hotspots con transición estilo Street View
 function crearHotspot(yaw, pitch, destino, texto = "Ir") {
   return {
     pitch,
@@ -31,15 +31,10 @@ function crearHotspot(yaw, pitch, destino, texto = "Ir") {
   };
 }
 
-//Desplegar menu al apretar clic derecho
-document.getElementById('tour').addEventListener('contextmenu', function (e) {
-  e.preventDefault(); // 🔹 Bloquea el menú original
 
+// 🔹 Menú al clic derecho
+document.getElementById('tour').addEventListener('contextmenu', function (e) {
+  e.preventDefault();
   alert("360 Tours © 2025\nDesarrollado por Ricardo Pool");
 });
-
-
-
-
-
 
