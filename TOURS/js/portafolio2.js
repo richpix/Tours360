@@ -1,22 +1,28 @@
+
+
+
 const escenasPortafolio = {
+  
+
 
   "atrio": {
-    "title": "Iglesia",
+   // "title": "Iglesia",
     "type": "equirectangular",
     "panorama": "https://360tours.com.mx/wp-content/uploads/2025/10/c1atrio.jpg",
    
     "hotSpots": [
-
+        // crearHotspotMenu(0, 0), // hotspot que abre el menú
         crearHotspot(-60, -10, "atrioizq","ir" ),
         crearHotspot(3, -30, "enmedio", ),
-        crearHotspot(56, -18, "atrioder", )
+        crearHotspot(56, -18, "atrioder", ),
+        
      
     ]
         },
 
 
   "atrioizq": {
-          "title": "Iglesia",
+         // "title": "Iglesia",
           "type": "equirectangular",
           "panorama": "https://360tours.com.mx/wp-content/uploads/2025/10/c1atriozq.jpg",
 
@@ -35,8 +41,8 @@ const escenasPortafolio = {
          
 
         "enmedio": {
-             "hotSpotDebug": true,
-          "title": "centro",
+            // "hotSpotDebug": true,
+        //  "title": "centro",
           "type": "equirectangular",
           "panorama": "https://360tours.com.mx/wp-content/uploads/2025/10/c1atriomedio.jpg",
           "hotSpots": [
@@ -50,7 +56,7 @@ const escenasPortafolio = {
             
 
         "atrioder": {
-          "title": "derecha",
+        //  "title": "derecha",
           "type": "equirectangular",
           "panorama": "https://360tours.com.mx/wp-content/uploads/2025/10/c1atrioder.jpg",
           "hotSpots": [
@@ -62,7 +68,7 @@ const escenasPortafolio = {
 
         
         "pasilloder": {
-          "title": "pasillo derecha",
+        //  "title": "pasillo derecha",
           "type": "equirectangular",
           "panorama": "https://360tours.com.mx/wp-content/uploads/2025/10/c2pasilloder.jpg",
           "hotSpots": [
@@ -72,7 +78,7 @@ const escenasPortafolio = {
         },  
 
         "pasilloder2": {
-          "title": "pasillo derecha",
+         // "title": "pasillo derecha",
           "type": "equirectangular",
           "panorama": "https://360tours.com.mx/wp-content/uploads/2025/10/c2pasilloder2.jpg",
           "hotSpots": [
@@ -82,7 +88,7 @@ const escenasPortafolio = {
         },
 
         "pasillomed": {
-          "title": "pasillo medio",
+         // "title": "pasillo medio",
           "type": "equirectangular",
           "panorama": "https://360tours.com.mx/wp-content/uploads/2025/10/c2pasillomedio.jpg",
           "hotSpots":  [
@@ -93,7 +99,7 @@ const escenasPortafolio = {
            
 
         "pasillomed2": {
-          "title": "pasillo medio",
+         // "title": "pasillo medio",
           "type": "equirectangular",
           "panorama": "https://360tours.com.mx/wp-content/uploads/2025/10/c2pasillomedio2.jpg",
           "hotSpots": [
@@ -103,7 +109,7 @@ const escenasPortafolio = {
         },
 
         "pasilloflor": {
-          "title": "florero",
+        //  "title": "florero",
           "type": "equirectangular",
           "panorama": "https://360tours.com.mx/wp-content/uploads/2025/10/c2pasillomedio3.jpg",
           "hotSpots": [
@@ -118,6 +124,55 @@ const escenasPortafolio = {
 
 
 
+
 // 🔹 Inicializar el visor
-crearVisor('tour', escenasPortafolio, 'atrio');
+// 🔹 Ya tienes `let viewer;` declarado globalmente
+ viewer= crearVisor('tour', escenasPortafolio, 'atrio');
+// Botones ya existentes en el HTML
+const zoomIn = document.getElementById('zoomInBtn');
+const zoomOut = document.getElementById('zoomOutBtn');
+const fullscreen = document.getElementById('fullscreenBtn');
+const gyro = document.getElementById('gyroBtn');
+const closeBtn = document.getElementById('closeBtn');
+
+// Solo asignamos eventos si viewer existe
+if (viewer) {
+  zoomIn.addEventListener('click', () => viewer.setHfov(viewer.getHfov() - 10));
+  zoomOut.addEventListener('click', () => viewer.setHfov(viewer.getHfov() + 10));
+  fullscreen.addEventListener('click', () => viewer.toggleFullscreen());
+  gyro.addEventListener('click', () => {
+    if (viewer.isOrientationSupported()) viewer.startOrientation();
+    else alert('Giroscopio no soportado');
+  });
+  closeBtn.addEventListener('click', () => {
+    window.history.back(); // O la URL de Airbnb/Hotel
+  });
+}
+
+/*menu de bienvenida
+const modal = document.getElementById('bienvenida');
+const cerrar = document.getElementById('cerrarBienvenida');
+
+function mostrarBienvenida() {
+  modal.classList.add('show');
+}
+
+function ocultarBienvenida() {
+  modal.classList.remove('show');
+}
+
+// Cerrar al hacer clic en la X
+cerrar.onclick = ocultarBienvenida;
+
+// Mostrar solo en la primera escena
+viewer.on('load', function() {
+  const escenaActual = viewer.getScene();
+
+  if (escenaActual === 'atrio') {
+    mostrarBienvenida();
+  } else {
+    ocultarBienvenida();
+  }
+});*/
+
 
