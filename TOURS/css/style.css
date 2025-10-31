@@ -66,3 +66,214 @@ html, body {
 }
 
 
+/*Modal de bienvenida con fade */
+.bienvenida-modal {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.bienvenida-modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.bienvenida-modal h2 {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+.bienvenida-modal p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.cerrar {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.menu-flotante {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  display: none;
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+.menu-flotante .cerrar {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 22px;
+}
+/* ======= MENU DE ESCENAS DARK GLASS iOS STYLE ======= */
+.scene-menu {
+  position: absolute;
+  bottom: 80px; /* ajusta según tu botón */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(20, 20, 25, 0.55); /* oscuro semi-transparente */
+  background: linear-gradient(
+    135deg,
+    rgba(20, 20, 25, 0.55) 0%,
+    rgba(30, 30, 35, 0.45) 100%
+  ); /* degradado sutil */
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  border-radius: 22px;
+  padding: 14px 22px;
+  display: flex;
+  align-items: flex-start;
+  overflow-x: auto;
+  max-width: 90%;
+  gap: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25); /* sombra suave */
+  z-index: 9998;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.scene-thumb-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 110px;
+}
+
+.scene-thumb {
+  width: 110px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 14px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.scene-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+}
+
+.scene-label {
+  margin-top: 6px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 0 0 4px rgba(0,0,0,0.7);
+}
+
+.scene-menu-toggle {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  background: rgba(20,20,25,0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  padding: 12px 18px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+.scene-menu-toggle:hover {
+  background: rgba(20,20,25,0.65);
+}
+
+
+
+
+/* 🔹 Ocultar los controles originales de Pannellum */
+.pnlm-controls,
+.pnlm-fullscreen-toggle-button,
+.pnlm-zoom-in,
+.pnlm-zoom-out,
+.pnlm-compass,
+.pnlm-orientation-button {
+  display: none !important;
+}
+
+/* Contenedor general para poder posicionar la X */
+#customControlsWrapper {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Contenedor glass oscuro de los botones */
+#customControlsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Botones solo con símbolos, sin fondo ni borde */
+#customControlsContainer button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#customControlsContainer button:hover {
+  transform: scale(1.2);
+  color: #ffd700; /* opcional: cambio de color al pasar el mouse */
+}
+
+/* Botón X separado */
+#closeBtn {
+  background: rgba(255, 0, 0, 0.25);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 22px;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+#closeBtn:hover {
+  background: rgba(255, 0, 0, 0.45);
+}
