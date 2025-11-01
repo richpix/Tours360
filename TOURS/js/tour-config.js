@@ -21,18 +21,27 @@ function crearVisor(idContenedor, configuracionEscenas, primeraEscena) {
   });
 
   return viewer;
+  
 }
 
 
 
 // 🔹 Crear hotspots 
 function crearHotspot(yaw, pitch, destino, texto = "Ir") {
+   
+
   return {
+    
     pitch,
     yaw,
     type: "custom",
-    cssClass: "hotspot-flecha",
+    cssClass: "hotspot-arrow",
     text: texto,
+    createTooltipFunc: (hotSpotDiv) => {
+      const img = document.createElement("img");
+      img.src = "https://360tours.com.mx/wp-content/uploads/2025/10/flecha2.png"; // tu imagen de flecha
+      hotSpotDiv.appendChild(img);
+    },
     clickHandlerFunc: () => {
       viewer.loadScene(destino);
     }
@@ -45,6 +54,5 @@ document.getElementById('tour').addEventListener('contextmenu', function (e) {
   e.preventDefault();
   alert("360 Tours © 2025\nDesarrollado por Ricardo Pool");
 });
-
 
 

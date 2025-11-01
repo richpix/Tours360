@@ -22,4 +22,7 @@ const escenasPortafolio = {
 
 // 🔹 Inicializar el visor
 crearVisor('tour', escenasPortafolio, 'atrio');
-
+// 🔹 Inicializar botones glass
+ inicializarBotonesGlass(viewer);
+// 🔹 Usar después de crear el visor
+aplicarZoomMovil(viewer, 70); // Ajusta 70 al zoom que quieras

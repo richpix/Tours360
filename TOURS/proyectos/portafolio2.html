@@ -9,54 +9,55 @@
   <!-- 🔹 Librerías de Pannellum -->
    
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
-   
 
   <!-- 🔹 Tus estilos globales -->
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body>
-  <div class="tour-container">
+ 
+ 
+  <div id="tour">
+    <button id="mobileControlsToggle">+</button>
+     <div class="tour-container">
     <div id="tour-header">
+      <!-- Logo y título del recorrido 
       <img src="https://360tours.com.mx/wp-content/uploads/2025/10/logot.png" alt="Logo" />
+      -->
       <span>Recorrido Virtual 2</span>
     </div>
     
+      
+<button id="closeBtn">✕</button>   <!--Boton de cerrar y que lleva a la pagina que quiera-->
 
-  <div id="tour"></div>
+          <div id="customControlsWrapper">
+  
+              <div id="customControlsContainer">
+              <button id="zoomInBtn">+</button>
+              <button id="zoomOutBtn">-</button>
+              <button id="fullscreenBtn">⛶</button>
+              <button id="gyroBtn">⊙</button>
+            </div>
+            </div>
+          
   </div>
 
-  <!-- 🔹 Menu flotante 
+  </div>
 
-      <div id="bienvenida" class="bienvenida-modal">
-          <div class="bienvenida-content">
-             <span id="cerrarBienvenida" class="cerrar">&times;</span>
-             <h2>Bienvenidas a Casa Maya by Jose</h2>
-             <p>Disfruta de tu recorrido virtual</p>
-          </div>
--->
 
     </div>
-<div id="customControlsWrapper">
-  <button id="closeBtn">✕</button>
-  <div id="customControlsContainer">
-    <button id="zoomInBtn">+</button>
-    <button id="zoomOutBtn">-</button>
-    <button id="fullscreenBtn">⛶</button>
-    <button id="gyroBtn">📱</button>
-  </div>
-</div>
-
+       
 
  <!-- 🔹 Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
   <script src="../js/tour-config.js"></script>
+  <script src="../js/botones-glass.js"></script>
+  <script src="../js/menu-escenas.js"></script>
   <!--cambiar con cadda recorrido <script> src="../js/botones-glass.js" </script>-->
   <script src="../js/portafolio2.js"></script>
   
-  <script src="../js/menu-escenas.js"></script>
+ 
   
 
 </body>
 </html>
-
