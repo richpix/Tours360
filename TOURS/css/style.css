@@ -485,5 +485,13 @@ html, body {
 }
 
 
+/* Solo iPhones en Safari */
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 768px) {
+    .scene-menu {
+      bottom: calc(12vh + env(safe-area-inset-bottom, 20px)); /* sube el menú un poco */
+    }
+  }
+}
 
 
