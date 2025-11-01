@@ -466,14 +466,13 @@ html, body {
    bottom: calc(60px + env(safe-area-inset-bottom, 0));
     
   }
-}
-
-
-@media (max-width: 1024px) {
-  .scene-menu {
+   .scene-menu {
     bottom: calc(140px + env(safe-area-inset-bottom, 0)); /* 👈 súbelo un poco */
   }
 }
+
+
+
 
 /* Ajuste específico para iPhones Safari */
 @supports (-webkit-touch-callout: none) {
@@ -481,18 +480,14 @@ html, body {
     .scene-menu-toggle {
       bottom: calc(12vh + env(safe-area-inset-bottom, 20px));
     }
-  }
-}
-
-
-/* Solo iPhones en Safari el menu de escenas*/
-@supports (-webkit-touch-callout: none) {
-  @media (max-width: 768px) {
-    .scene-menu {
-      bottom: calc(12vh + env(safe-area-inset-bottom, 25px)); /* sube el menú un poco */
+     .scene-menu {
+      bottom: calc(12vh + 70px+ env(safe-area-inset-bottom, 20px)); /* sube el menú un poco */
     }
   }
 }
+
+
+
 
 /*Ajusatar tamaño del boton en pantallas pequeñas*/
 @media (max-width:768px) {
@@ -500,6 +495,7 @@ html, body {
   font-size: 35px;
   }
 }
+
 
 
 
