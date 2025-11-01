@@ -471,6 +471,11 @@ html, body {
 }
 
 
+@media (max-width: 768px) {
+  .scene-menu {
+    bottom: calc(60px + env(safe-area-inset-bottom, 0)); /* 👈 súbelo un poco */
+  }
+}
 
 
 
