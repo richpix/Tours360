@@ -482,7 +482,7 @@ html, body {
     }
      .scene-menu {
     /*  bottom: calc(12vh + 70px+ env(safe-area-inset-bottom, 20px));  sube el menú un poco */
-      bottom: calc(20vh + env(safe-area-inset-bottom, 0)); /* solo iPhones */
+      bottom: calc(20vh + env(safe-area-inset-bottom, 20px)); /* solo iPhones */
     }
   }
 }
@@ -496,6 +496,7 @@ html, body {
   font-size: 35px;
   }
 }
+
 
 
 
