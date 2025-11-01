@@ -228,9 +228,9 @@ html, body {
   text-shadow: 0 0 4px rgba(0,0,0,0.7);
 }
 
-.scene-menu-toggle {
+.scene-menu-toggle { /*Boton de abrir menu*/
   position: absolute;
-  bottom: 20px;
+  bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9999;
@@ -359,7 +359,7 @@ html, body {
   color: #fff;
   border: none;
   border-radius: 50px;
-  font-size: 20px; /* tamaño visible */
+  font-size: 30px; /* tamaño visible */
   cursor: pointer;
   z-index: 10000;
   display: none; /* 🔹 por defecto oculto */
@@ -460,4 +460,5 @@ html, body {
     bottom: 100px; /* más arriba en pantallas pequeñas */
   }
 }
+
 
