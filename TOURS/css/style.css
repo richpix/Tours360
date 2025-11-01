@@ -495,7 +495,11 @@ html, body {
   #mobileControlsToggle{
   font-size: 35px;
   }
+   #customControlsContainer button{
+    font-size: 35px;
+   }
 }
+
 
 
 
