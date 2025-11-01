@@ -10,6 +10,7 @@ html, body {
 #tour {
   width: 100%;
   height: 100vh;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 #tour-header  {
@@ -473,6 +474,7 @@ html, body {
     bottom: calc(140px + env(safe-area-inset-bottom, 0)); /* 👈 súbelo un poco */
   }
 }
+
 
 
 
