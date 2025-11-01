@@ -459,7 +459,7 @@ html, body {
 
 
 
-
+/*Tablets*/
 
 @media (max-width: 1024px) {
   .scene-menu-toggle {
@@ -485,21 +485,22 @@ html, body {
 }
 
 
-/* Solo iPhones en Safari */
+/* Solo iPhones en Safari el menu de escenas*/
 @supports (-webkit-touch-callout: none) {
   @media (max-width: 768px) {
     .scene-menu {
-      bottom: calc(10vh + env(safe-area-inset-bottom, 20px)); /* sube el menú un poco */
+      bottom: calc(12vh + env(safe-area-inset-bottom, 30px)); /* sube el menú un poco */
     }
   }
 }
 
 
-@media (max-width:768) {
-  .mobileControlsToggle{
-    font-size: 50px;
+@media (max-width:768px) {
+  #mobileControlsToggle{
+  font-size: 60px;
   }
 }
+
 
 
 
