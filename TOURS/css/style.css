@@ -1,5 +1,6 @@
 
 
+
 html, body {
   margin: 0;
   height: 100%;
@@ -455,15 +456,11 @@ html, body {
   animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-@media (max-width: 768px) {
-  .scene-menu {
-    bottom: 100px; /* más arriba en pantallas pequeñas */
-  }
-}
 
 
 
-@media (max-width: 768px) {
+
+@media (max-width: 1024px) {
   .scene-menu-toggle {
    bottom: calc(8vh + env(safe-area-inset-bottom, 20px));
     
@@ -471,12 +468,11 @@ html, body {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .scene-menu {
-    bottom: calc(80px + env(safe-area-inset-bottom, 0)); /* 👈 súbelo un poco */
+    bottom: calc(120px + env(safe-area-inset-bottom, 0)); /* 👈 súbelo un poco */
   }
 }
-
 
 
 
