@@ -462,7 +462,7 @@ html, body {
 
 @media (max-width: 1024px) {
   .scene-menu-toggle {
-   bottom: calc(20px + env(safe-area-inset-bottom, 0));
+   bottom: calc(60px + env(safe-area-inset-bottom, 0));
     
   }
 }
@@ -473,6 +473,7 @@ html, body {
     bottom: calc(140px + env(safe-area-inset-bottom, 0)); /* 👈 súbelo un poco */
   }
 }
+
 
 
 
