@@ -489,7 +489,7 @@ html, body {
 @supports (-webkit-touch-callout: none) {
   @media (max-width: 768px) {
     .scene-menu {
-      bottom: calc(12vh + env(safe-area-inset-bottom, 30px)); /* sube el menú un poco */
+      bottom: calc(12vh + env(safe-area-inset-bottom, 14vh)); /* sube el menú un poco */
     }
   }
 }
@@ -497,9 +497,10 @@ html, body {
 
 @media (max-width:768px) {
   #mobileControlsToggle{
-  font-size: 60px;
+  font-size: 45px;
   }
 }
+
 
 
 
