@@ -489,17 +489,18 @@ html, body {
 @supports (-webkit-touch-callout: none) {
   @media (max-width: 768px) {
     .scene-menu {
-      bottom: calc(12vh + env(safe-area-inset-bottom, 14vh)); /* sube el menú un poco */
+      bottom: calc(12vh + env(safe-area-inset-bottom, 25px)); /* sube el menú un poco */
     }
   }
 }
 
-
+/*Ajusatar tamaño del boton en pantallas pequeñas*/
 @media (max-width:768px) {
   #mobileControlsToggle{
-  font-size: 40px;
+  font-size: 35px;
   }
 }
+
 
 
 
