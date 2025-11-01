@@ -489,11 +489,17 @@ html, body {
 @supports (-webkit-touch-callout: none) {
   @media (max-width: 768px) {
     .scene-menu {
-      bottom: calc(14vh + env(safe-area-inset-bottom, 20px)); /* sube el menú un poco */
+      bottom: calc(10vh + env(safe-area-inset-bottom, 20px)); /* sube el menú un poco */
     }
   }
 }
 
+
+@media (max-width:768) {
+  .mobileControlsToggle{
+    font-size: 50px;
+  }
+}
 
 
 
