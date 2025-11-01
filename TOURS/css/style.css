@@ -230,7 +230,7 @@ html, body {
 
 .scene-menu-toggle { /*Boton de abrir menu*/
   position: absolute;
-  bottom: 5%;
+  bottom: 3%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9999;
@@ -460,5 +460,6 @@ html, body {
     bottom: 100px; /* más arriba en pantallas pequeñas */
   }
 }
+
 
 
