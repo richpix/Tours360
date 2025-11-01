@@ -231,7 +231,7 @@ html, body {
 
 .scene-menu-toggle { /*Boton de abrir menu*/
   position: absolute;
-  bottom: 20px;
+  bottom: calc(5vh + env(safe-area-inset-bottom, 0));
   left: 50%;
   transform: translateX(-50%);
   z-index: 9999;
@@ -462,7 +462,7 @@ html, body {
 
 @media (max-width: 1024px) {
   .scene-menu-toggle {
-   bottom: calc(8vh + env(safe-area-inset-bottom, 20px));
+   bottom: calc(5vh + env(safe-area-inset-bottom, 5vh));
     
   }
 }
@@ -470,9 +470,7 @@ html, body {
 
 @media (max-width: 1024px) {
   .scene-menu {
-    bottom: calc(120px + env(safe-area-inset-bottom, 0)); /* 👈 súbelo un poco */
+    bottom: calc(140px + env(safe-area-inset-bottom, 0)); /* 👈 súbelo un poco */
   }
 }
-
-
 
